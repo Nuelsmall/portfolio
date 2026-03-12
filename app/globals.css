@@ -27,4 +27,34 @@
     transform: translate3d(0, 0, 0);
   }
 }   
+
+.about-carousel-float {
+  animation: about-float 8s ease-in-out infinite;
+}
+
+.about-carousel-delay {
+  animation-delay: -2s;
+}
+
+.about-carousel-center {
+  animation-duration: 10s;
+}
+
+@keyframes about-float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-carousel-float {
+    animation: none;
+  }
+}
  
