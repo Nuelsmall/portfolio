@@ -1,0 +1,195 @@
+{
+  "title": "Edventur Case Study",
+  "content": [
+    {
+      "section": "Overview",
+      "text": [
+        "Edventur is an AI-powered study app that helps students turn notes, slides, and reading materials into interactive quizzes for smarter exam preparation.",
+        "The idea was simple: instead of relying on passive reading, learners could upload their own study materials and turn them into active practice. The product combines AI quiz generation, visible progress, instant feedback, and light gamification to make studying feel more engaging, measurable, and worth repeating."
+      ]
+    },
+    {
+      "section": "Role",
+      "text": [
+        "Product Designer",
+        "I designed the Study Mode experience from concept to polished prototype. My role covered product thinking, user flows, wireframing, interaction design, visual design, and usability testing.",
+        "I owned the core journey from upload to quiz completion, including edge cases like unsupported files, AI timeout, and accidental mid-quiz exit. I also shaped the key UX decisions behind the experience, including progress tracking, timed challenge mechanics, instant feedback, a more human AI assistant called Edna, and a central upload action in the bottom navigation."
+      ]
+    },
+    {
+      "section": "Project Snapshot",
+      "text": [
+        "Role: Product Designer",
+        "Scope: Study Mode experience",
+        "Platform: Mobile app",
+        "Focus: Upload to quiz completion journey",
+        "Outcome: High-fidelity concept tested with users"
+      ]
+    },
+    {
+      "section": "The challenge",
+      "text": [
+        "Studying for exams often feels passive, repetitive, and hard to measure. Many learners already have notes and reading materials, but turning that content into active practice still takes too much effort.",
+        "That created two clear opportunities. From a user perspective, learners needed a faster and more motivating way to revise. From a business perspective, there was room to create a study product that increased engagement, repeat usage, and perceived value by making exam prep feel more rewarding and less routine."
+      ]
+    },
+    {
+      "section": "Understanding the problem",
+      "text": [
+        "The real issue was not access to study materials. Students already had the content. The issue was momentum.",
+        "Learners wanted a study tool that helped them start quickly, stay engaged, and see progress as they went. Their pain points included dry learning experiences, unclear scoring, waiting friction during quiz generation, and flat results screens that did not encourage continued learning.",
+        "This meant Edventur had to do more than generate quizzes. It had to reduce friction from upload to completion, make progress visible at every step, and create a study loop that felt focused, encouraging, and easy to repeat."
+      ]
+    },
+    {
+      "section": "Research Insight",
+      "text": [
+        "A few insights shaped the direction of the product.",
+        "Students were more likely to begin when the setup felt quick and lightweight. The longer it took to get started, the easier it was to lose momentum.",
+        "Visible progress mattered. Studying feels more rewarding when learners can see movement through scores, timers, feedback, and completion cues.",
+        "AI convenience alone was not enough. Users also needed clarity and reassurance, especially while the system was processing files.",
+        "The end of a quiz mattered as much as the start. A strong results experience needed to do more than show performance. It needed to guide the next step. These insights align with the pain points and testing issues already captured in your case study."
+      ]
+    },
+    {
+      "section": "Defining the user",
+      "text": [
+        "Edventur was designed for learners like Aisha, a 21-year-old university student preparing for exams.",
+        "She already has lecture notes, slides, and reading materials, but still struggles to study in a way that feels active and productive. She wants revision to feel efficient, motivating, and easy to track. She loses interest quickly when a tool feels slow, unclear, or too effort-heavy at the start.",
+        "This made her a strong anchor for the product: someone who did not need more content, but a better way to turn content into progress."
+      ],
+      "images": [
+        "<image_1>",
+        "<image_2>",
+        "<image_3>"
+      ]
+    },
+    {
+      "section": "Mapping the experience",
+      "text": [
+        "I mapped the core journey from uploading study material to AI processing, mode selection, quiz session, and results. I also designed for edge cases like unsupported files, accidental mid-quiz exit, and AI timeout, because those moments often define whether a product feels trustworthy.",
+        "The goal was to keep the experience simple without making it shallow. Every step had to answer a clear question for the user: what is happening, where am I, and what do I do next?"
+      ],
+      "images": [
+        "<image_4>",
+        "<image_5>",
+        "<image_6>"
+      ]
+    },
+    {
+      "section": "Setting the Path way",
+      "text": [
+        "I mapped the Study Mode journey from upload to results, making sure each step felt clear, lightweight, and easy to follow. The structure was built around the app’s main value: helping students upload their own materials and quickly turn them into active practice.",
+        "I also designed for edge cases like unsupported files, AI timeout, and accidental exits, because a study product needs to feel reliable even when things go wrong. The result was a flow and structure that supported momentum, reduced friction, and kept the next step visible throughout the experience."
+      ],
+      "images": [
+        "<image_7>",
+        "<image_8>",
+        "<image_9>"
+      ]
+    },
+    {
+      "section": "Wireframes to high fidelity",
+      "text": [
+        "I started with wireframes to simplify the structure of the Study Mode journey and reduce friction early. At this stage, the priority was clarity: helping users understand the flow, move confidently, and stay focused on the main action.",
+        "Once the structure felt right, I translated it into a high-fidelity mobile interface that made studying feel more focused, energetic, and rewarding. The final experience was designed to support momentum through stronger hierarchy, clearer feedback, and more visible progress."
+      ],
+      "images": [
+        "<image_10>",
+        "<image_11>",
+        "<image_12>",
+        "<image_13>"
+      ]
+    },
+    {
+      "section": "Design Decisions",
+      "text": [
+        "A few design decisions shaped the experience.",
+        "Visible progress",
+        "Studying can feel abstract, so I used scores, timers, and progress cues to make effort feel measurable.",
+        "Light gamification",
+        "I introduced challenge mechanics and instant feedback to make repeated use feel more rewarding, without making the product feel childish.",
+        "Supportive AI",
+        "I gave the AI a warmer presence through Edna, making the experience feel less mechanical and more approachable during AI-powered moments.",
+        "Upload as the main action",
+        "Upload was treated as the gateway to value, so I made it prominent in the navigation and easy to find.",
+        "Together, these decisions were guided by motivation principles and the goal of making studying feel more engaging, less intimidating, and easier to sustain over time."
+      ]
+    },
+    {
+      "section": "Usability Testing",
+      "text": [
+        "To validate whether Edventur’s Study Mode felt clear, engaging, and easy to use, I ran a lightweight moderated usability test on the high-fidelity prototype. The goal was to test the full study journey, from uploading material to completing a quiz and reviewing results.",
+        "Testing process",
+        "Participants: 7 university students and recent graduates preparing for exams",
+        "Average age: 21.4 years",
+        "Format: Moderated remote sessions",
+        "Session length: 30 to 35 minutes each",
+        "Average comfort with AI tools: 3.7/5",
+        "Average post-test confidence: 4.0/5"
+      ]
+    },
+    {
+      "section": "Performance summary",
+      "text": [
+        "42 total task attempts were recorded across all participants",
+        "Overall task success rate: 95.2%",
+        "Average ease score: 5.7/7",
+        "Average errors per task: 0.57"
+      ]
+    },
+    {
+      "section": "What worked well",
+      "text": [
+        "Upload supported file: 100% completion, average time 33.6s, ease score 6.1/7",
+        "AI processing to mode selection: 100% completion, average time 18.9s, ease score 5.7/7",
+        "Start Study Mode: 100% completion, average time 14.7s, highest ease score at 6.6/7",
+        "Complete quiz and track progress: 100% completion, average time 115.6s, ease score 6.0/7",
+        "These results showed that once users entered the core quiz flow, the experience felt clear and engaging. Progress indicators, timer, and instant feedback helped users stay focused and confident."
+      ]
+    },
+    {
+      "section": "Key issues found",
+      "text": [
+        "Recovering from unsupported file error: 85.7% completion, lowest-performing task, with the highest average errors (1.29)",
+        "Reviewing results and choosing next step: 85.7% completion, lowest ease score at 4.9/7",
+        "4 out of 7 participants wanted clearer system-status feedback during AI processing",
+        "3 out of 7 participants paused during upload to confirm supported file formats"
+      ]
+    },
+    {
+      "section": "Result",
+      "text": [
+        "The testing showed that Edventur’s core concept was strong.",
+        "The main study loop performed well, especially around entering Study Mode and completing a quiz. The biggest issues were not in the core interaction, but in the moments of uncertainty around error recovery, AI waiting feedback, and post-quiz next steps.",
+        "That gave the project a clear direction for iteration: improve trust during waiting states, make file requirements clearer earlier, and make the results screen more actionable."
+      ]
+    },
+    {
+      "section": "Mockups",
+      "images": [
+        "<image_14>",
+        "<image_15>",
+        "<image_16>",
+        "<image_17>",
+        "<image_18>",
+        "<image_19>",
+        "<image_20>"
+      ]
+    },
+    {
+      "section": "Reflection and Key Outcomes",
+      "text": [
+        "This project taught me that designing for learning is really about designing for momentum.",
+        "Students are more likely to continue when the experience reduces setup effort, makes progress visible, and gives them a clear next move. Looking back, I would improve the AI waiting state, clarify upload requirements earlier, and redesign the results screen so it better guides what happens after a quiz ends.",
+        "More than anything, Edventur pushed me to think beyond interface design and focus on how a product can make effort feel lighter, progress feel visible, and learning feel worth repeating.",
+        "Key Outcomes",
+        "Validated the core product concept",
+        "95.2% overall task success rate",
+        "5.7/7 average ease score",
+        "100% completion on key quiz flow tasks",
+        "Clear next-step improvements identified for iteration two"
+      ]
+    }
+  ]
+}

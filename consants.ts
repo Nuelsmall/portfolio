@@ -14,6 +14,7 @@ export const projects = [
     type: "Education",
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae ipsam fugit accusantium, aliquid incidunt voluptates.",
+    href: "/projects/edventur",
   },
   {
     image: "/dinendash.png",

@@ -2,6 +2,8 @@ import { reviews } from "@/consants";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 
+
+
 const Reviews = () => {
   const [lefts, setLefts] = useState(0);
   const [right, setRight] = useState(0);
