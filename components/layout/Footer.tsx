@@ -32,7 +32,7 @@ const Footer = () => {
       </div>
       <div className="border-t border-gray-300/30 pt-5">
         <p className="text-gray-100/50 text-md font-semibold">
-          © 2025 All right reserved to Aman Gautam
+          © 2026 All right reserved to Emmanuel John
         </p>
       </div>
     </div>

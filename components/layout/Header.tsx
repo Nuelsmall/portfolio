@@ -104,18 +104,20 @@ const Header = () => {
   }, [menuOpen]);
   return (
     <div className="p-3 z-100 px-10 backdrop-blur-md flex justify-between bg-white/60 sticky top-0">
-      <div className="flex gap-3 items-center">
-        <div className="border-2 w-12 h-12 overflow-hidden border-white shadow-md rounded-xl ">
-          <Image
-            width={20}
-            height={20}
-            alt=""
-            className="w-full h-full"
-            src={"/portrait.png"}
-          />
+      <Link href="/" aria-label="Go to home">
+        <div className="flex gap-3 items-center">
+          <div className="border-2 w-12 h-12 overflow-hidden border-white shadow-md rounded-xl ">
+            <Image
+              width={20}
+              height={20}
+              alt=""
+              className="w-full h-full"
+              src={"/portrait.png"}
+            />
+          </div>
+          <p className="font-medium">Emmanuel John</p>
         </div>
-        <p className="font-medium">Emmanuel John</p>
-      </div>
+      </Link>
 
       <div ref={menuRef} className="relative">
         <button
@@ -146,11 +148,10 @@ const Header = () => {
           id="header-menu"
           role="dialog"
           aria-hidden={!menuOpen}
-          className={`absolute right-0 top-14 w-56 rounded-md border border-gray-200 bg-white p-2 shadow-xl transition duration-200 origin-top-right ${
-            menuOpen
+          className={`absolute right-0 top-14 w-56 rounded-md border border-gray-200 bg-white p-2 shadow-xl transition duration-200 origin-top-right ${menuOpen
               ? "opacity-100 translate-y-0 scale-100"
               : "pointer-events-none opacity-0 -translate-y-2 scale-95"
-          }`}
+            }`}
         >
           <ul className="mt-1 flex flex-col gap-2 pt-2">
             {menuItems.map((item) => (

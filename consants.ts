@@ -13,7 +13,7 @@ export const projects = [
     name: "Edventur",
     type: "Education",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae ipsam fugit accusantium, aliquid incidunt voluptates.",
+      "Edventur is an AI-powered study app that helps students turn notes, slides, and reading materials into interactive quizzes for smarter exam preparation.",
     href: "/projects/edventur",
   },
   {

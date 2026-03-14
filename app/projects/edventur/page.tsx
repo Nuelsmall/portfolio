@@ -142,7 +142,7 @@ const EdventurCaseStudyPage = () => {
 
             <div className="relative w-full overflow-hidden rounded-3xl border bg-white shadow-[0_20px_50px_rgba(15,15,15,0.06)]">
               <Image
-                src="/edventur/hero.png"
+                src="/edventur/overview.png"
                 alt="Edventur case study hero"
                 width={1536}
                 height={1024}
@@ -161,14 +161,14 @@ const EdventurCaseStudyPage = () => {
                 <span className="w-fit rounded-full border border-orange-400 px-4 py-1 text-sm text-orange-700">
                   Overview
                 </span>
-                <div className="flex flex-col gap-4 text-gray-700 leading-7">
+                <div className="flex flex-col gap-4 text-gray-700 leading-7 mt-12">
                   {overview.map((item) => (
                     <p key={item}>{item}</p>
                   ))}
                 </div>
               </div>
 
-              <div className="rounded-2xl bg-white p-6 shadow-[0_12px_30px_rgba(15,15,15,0.06)]">
+              {/* <div className="rounded-2xl bg-white p-6 shadow-[0_12px_30px_rgba(15,15,15,0.06)]">
                 <h3 className="text-lg font-semibold text-neutral-900">
                   Project Snapshot
                 </h3>
@@ -187,7 +187,7 @@ const EdventurCaseStudyPage = () => {
                     </div>
                   ))}
                 </div>
-              </div>
+              </div> */}
             </div>
 
             <div className="flex flex-col gap-6">
@@ -296,56 +296,23 @@ const EdventurCaseStudyPage = () => {
         </SectionWrapper>
 
         <SectionWrapper className="bg-gray-200">
-          <div className="grid gap-8">
-            <div className="grid gap-8 lg:grid-cols-2">
-              <div className="flex flex-col gap-4">
-                <h2 className="text-3xl font-semibold text-neutral-900">
-                  Mapping the Experience
-                </h2>
-                <p className="text-gray-600 leading-7">{mapping[0]}</p>
-              </div>
-              <div className="flex flex-col gap-4">
-                <h2 className="text-3xl font-semibold text-neutral-900">
-                  Setting the Pathway
-                </h2>
-                <div className="flex flex-col gap-3 text-gray-600 leading-7">
-                  {pathway.map((item) => (
-                    <p key={item}>{item}</p>
-                  ))}
-                </div>
-              </div>
+          <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr] items-center">
+            <div className="flex flex-col gap-4">
+              <span className="w-fit rounded-full border border-orange-400 px-4 py-1 text-sm text-orange-700">
+                Mapping the Experience
+              </span>
+              <p className="text-gray-600 leading-7">{mapping[0]}</p>
             </div>
-            <div className="grid gap-6 lg:grid-cols-3">
-              <div className="rounded-2xl border bg-white p-3 shadow-[0_12px_30px_rgba(15,15,15,0.06)]">
-                <Image
-                  src="/edventur/user-flow.png"
-                  alt="User flow map"
-                  width={1536}
-                  height={1024}
-                  className="h-auto w-full rounded-xl object-cover"
-                  sizes="(max-width: 1024px) 100vw, 380px"
-                />
-              </div>
-              <div className="rounded-2xl border bg-white p-3 shadow-[0_12px_30px_rgba(15,15,15,0.06)]">
-                <Image
-                  src="/edventur/information-architecture.png"
-                  alt="Information architecture"
-                  width={1536}
-                  height={1024}
-                  className="h-auto w-full rounded-xl object-cover"
-                  sizes="(max-width: 1024px) 100vw, 380px"
-                />
-              </div>
-              <div className="rounded-2xl border bg-white p-3 shadow-[0_12px_30px_rgba(15,15,15,0.06)]">
-                <Image
-                  src="/edventur/user-journey.png"
-                  alt="User journey map"
-                  width={1536}
-                  height={1024}
-                  className="h-auto w-full rounded-xl object-cover"
-                  sizes="(max-width: 1024px) 100vw, 380px"
-                />
-              </div>
+
+            <div className="rounded-2xl border bg-white p-3 shadow-[0_12px_30px_rgba(15,15,15,0.06)]">
+              <Image
+                src="/edventur/user-journey.png"
+                alt="User journey map"
+                width={1536}
+                height={1024}
+                className="h-auto w-full rounded-xl object-cover"
+                sizes="(max-width: 1024px) 100vw, 380px"
+              />
             </div>
           </div>
         </SectionWrapper>
@@ -353,20 +320,92 @@ const EdventurCaseStudyPage = () => {
         <SectionWrapper>
           <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr] items-center">
             <div className="flex flex-col gap-4">
-              <h2 className="text-3xl font-semibold text-neutral-900">
+              <span className="w-fit rounded-full border border-orange-400 px-4 py-1 text-sm text-orange-700">
+                Setting the Pathway
+              </span>
+              <p className="text-gray-600 leading-7">{pathway[0]}</p>
+            </div>
+
+            <div className="rounded-2xl border bg-white p-3 shadow-[0_12px_30px_rgba(15,15,15,0.06)]">
+              <Image
+                src="/edventur/user-flow.png"
+                alt="User Flow"
+                width={1536}
+                height={1024}
+                className="h-auto w-full rounded-xl object-cover"
+                sizes="(max-width: 1024px) 100vw, 380px"
+              />
+            </div>
+          </div>
+        </SectionWrapper>
+
+        <SectionWrapper className="bg-gray-200">
+          <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr] items-center">
+            <div className="flex flex-col gap-4">
+              <span className="w-fit rounded-full border border-orange-400 px-4 py-1 text-sm text-orange-700">
+                Information Architecture
+              </span>
+              <p className="text-gray-600 leading-7">
+                The information architecture for Edventur was designed to make the study journey intuitive and seamless. I mapped out every step—from uploading materials to quiz completion—ensuring that users always know where they are and what comes next. The structure reduces friction, keeps navigation simple, and supports momentum by making each stage of the process clear and easy to follow. Special care was taken to address edge cases, so learners feel confident and supported throughout their experience.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border bg-white p-3 shadow-[0_12px_30px_rgba(15,15,15,0.06)]">
+              <Image
+                src="/edventur/information-architecture.png"
+                alt="Information Architecture"
+                width={1536}
+                height={1024}
+                className="h-auto w-full rounded-xl object-cover"
+                sizes="(max-width: 1024px) 100vw, 380px"
+              />
+            </div>
+          </div>
+        </SectionWrapper>
+
+        <SectionWrapper>
+          <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr] items-center">
+            <div className="flex flex-col gap-4">
+              <span className="w-fit rounded-full border border-orange-400 px-4 py-1 text-sm text-orange-700">
                 Wireframes to High Fidelity
-              </h2>
+              </span>
               <div className="flex flex-col gap-4 text-gray-600 leading-7">
                 {wireframes.map((item) => (
                   <p key={item}>{item}</p>
                 ))}
               </div>
+
+              <div
+                className="rounded-2xl border bg-white p-3 shadow-[0_12px_30px_rgba(15,15,15,0.06)]"
+              >
+                <Image
+                  src="/edventur/wireframe-3.png"
+                  alt="Wireframe exploration"
+                  width={1536}
+                  height={1024}
+                  className="h-auto w-full rounded-xl object-cover"
+                  sizes="(max-width: 1024px) 100vw, 520px"
+                />
+              </div>
+
+              <div
+                className="rounded-2xl border bg-white p-3 shadow-[0_12px_30px_rgba(15,15,15,0.06)]"
+              >
+                <Image
+                  src="/edventur/wireframe-5.png"
+                  alt="Wireframe exploration"
+                  width={1536}
+                  height={1024}
+                  className="h-auto w-full rounded-xl object-cover"
+                  sizes="(max-width: 1024px) 100vw, 520px"
+                />
+              </div>
             </div>
             <div className="grid gap-4">
               {[
-                "/edventur/wireframe-3.png",
+                // "/edventur/wireframe-3.png",
                 "/edventur/wireframe-4.png",
-                "/edventur/wireframe-5.png",
+                // "/edventur/wireframe-5.png",
               ].map((src) => (
                 <div
                   key={src}
@@ -389,9 +428,9 @@ const EdventurCaseStudyPage = () => {
         <SectionWrapper className="bg-gray-200">
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-4 max-w-200">
-              <h2 className="text-3xl font-semibold text-neutral-900">
+              <span className="w-fit rounded-full border border-orange-400 px-4 py-1 text-sm text-orange-700">
                 Design Decisions
-              </h2>
+              </span>
               <p className="text-gray-600 leading-7">{decisionsIntro}</p>
             </div>
             <div className="grid gap-6 lg:grid-cols-2">
@@ -417,9 +456,9 @@ const EdventurCaseStudyPage = () => {
           <div className="grid gap-10">
             <div className="grid gap-6 lg:grid-cols-[1.1fr_1fr]">
               <div className="flex flex-col gap-4">
-                <h2 className="text-3xl font-semibold text-neutral-900">
+                <span className="w-fit rounded-full border border-orange-400 px-4 py-1 text-sm text-orange-700">
                   Usability Testing
-                </h2>
+                </span>
                 <p className="text-gray-600 leading-7">{usabilityIntro}</p>
               </div>
               <div className="rounded-2xl bg-white p-6 shadow-[0_12px_30px_rgba(15,15,15,0.06)]">
@@ -500,7 +539,9 @@ const EdventurCaseStudyPage = () => {
         <SectionWrapper>
           <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr] items-center">
             <div className="flex flex-col gap-4">
-              <h2 className="text-3xl font-semibold text-neutral-900">Result</h2>
+              <span className="w-fit rounded-full border border-orange-400 px-4 py-1 text-sm text-orange-700">
+                Result
+              </span>
               <div className="flex flex-col gap-4 text-gray-600 leading-7">
                 {result.map((item) => (
                   <p key={item}>{item}</p>
@@ -524,7 +565,7 @@ const EdventurCaseStudyPage = () => {
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-2">
               <span className="w-fit rounded-full border border-orange-400 px-4 py-1 text-sm text-orange-700">
-                Mockups
+                Final Designs
               </span>
               <h2 className="text-3xl font-semibold text-neutral-900">
                 Study Mode in Action
@@ -548,6 +589,18 @@ const EdventurCaseStudyPage = () => {
               ))}
             </div>
           </div>
+          <div className="w-full flex justify-center py-10 bg-gray-200">
+            <a
+              href="https://www.figma.com/proto/lC55Xfxl1IA7p7eDDY8XGp/Edventur?node-id=32-633&p=f&t=IVeJvxLZEEDrzpNC-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=32%3A633"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-600 hover:bg-blue-700 transition-colors px-8 py-4 rounded-xl text-white font-semibold text-lg shadow-lg"
+              style={{ textDecoration: 'none' }}
+            >
+              View Figma Prototype
+            </a>
+          </div>
+          {/* Figma Prototype Button */}
         </SectionWrapper>
 
         <SectionWrapper>
@@ -574,6 +627,7 @@ const EdventurCaseStudyPage = () => {
             </div>
           </div>
         </SectionWrapper>
+
       </main>
       <Footer />
       <div className="fixed bottom-0 bg-linear-to-tl from-white/20 to-transparent z-1000 left-0 h-10 w-full backdrop-blur-sm max-md:hidden"></div>

@@ -11,6 +11,18 @@ const Project = ({
   const isInteractive = Boolean(p.href);
   const actionLabel = isInteractive ? "View Details" : "Case Study Soon";
 
+  // Edventur snapshot data (hardcoded for now, could be loaded dynamically)
+  let snapshotItems: { label: string; value: string }[] = [];
+  if (p.name === "Edventur") {
+    snapshotItems = [
+      { label: "Role", value: "Product Designer" },
+      { label: "Scope", value: "Study Mode experience" },
+      { label: "Platform", value: "Mobile app" },
+      { label: "Focus", value: "Upload to quiz completion journey" },
+      { label: "Outcome", value: "High-fidelity concept tested with users" },
+    ];
+  }
+
   const actionContent = (
     <div className=" w-full h-full overflow-hidden">
       <div
@@ -28,9 +40,19 @@ const Project = ({
       <div className="p-8 bg-gray-200 flex flex-col rounded-xl">
         <h2 className="text-2xl text-neutral-900 font-semibold">{p.name}</h2>
         <p className="text-md mt-2 text-neutral-600">{p.description}</p>
-        <p className="flex flex-1 mt-5 capitalize justify-between text-neutral-600 tetx-lg">
+        {/* <p className="flex flex-1 mt-5 capitalize justify-between text-neutral-600 tetx-lg">
           Project Type <span>{p.type}</span>
-        </p>
+        </p> */}
+        {/* Project Snapshot for Edventur as a simple list */}
+        {snapshotItems.length > 0 && (
+          <ul className="mt-5 list-none list-inside text-sm text-gray-700">
+            {snapshotItems.map((item) => (
+              <li key={item.label}>
+                <span className="font-semibold">{item.label}:</span> {item.value}
+              </li>
+            ))}
+          </ul>
+        )}
         {isInteractive ? (
           <Link
             href={p.href as string}
