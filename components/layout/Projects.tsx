@@ -36,7 +36,12 @@ const Projects = () => {
         </p>
         <div className="flex gap-5 max-lg:flex-col items-center max-lg:items-start justify-between">
           <h2 className="text-3xl w-full max-w-140 lg:max-w-150 leading-1- font-semibold">
+<<<<<<< HEAD
             Designing meaningful user experiences with grit, growth, and thoughtful simplicity.
+=======
+            Building Meaningful Products, Fueled by Grit, Growth & a Touch of
+            Zen
+>>>>>>> cab08290dc3bc19f9a191a944926a1b69fa8f9d1
           </h2>
          <Link href={"/projects"}>
           <button

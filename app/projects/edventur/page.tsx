@@ -589,7 +589,10 @@ const EdventurCaseStudyPage = () => {
               ))}
             </div>
           </div>
+<<<<<<< HEAD
             {/* Figma Prototype Button */}
+=======
+>>>>>>> cab08290dc3bc19f9a191a944926a1b69fa8f9d1
           <div className="w-full flex justify-center py-10 bg-gray-200">
             <a
               href="https://www.figma.com/proto/lC55Xfxl1IA7p7eDDY8XGp/Edventur?node-id=32-633&p=f&t=IVeJvxLZEEDrzpNC-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=32%3A633"
@@ -601,6 +604,10 @@ const EdventurCaseStudyPage = () => {
               View Figma Prototype
             </a>
           </div>
+<<<<<<< HEAD
+=======
+          {/* Figma Prototype Button */}
+>>>>>>> cab08290dc3bc19f9a191a944926a1b69fa8f9d1
         </SectionWrapper>
 
         <SectionWrapper>
