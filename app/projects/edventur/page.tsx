@@ -589,6 +589,7 @@ const EdventurCaseStudyPage = () => {
               ))}
             </div>
           </div>
+            {/* Figma Prototype Button */}
           <div className="w-full flex justify-center py-10 bg-gray-200">
             <a
               href="https://www.figma.com/proto/lC55Xfxl1IA7p7eDDY8XGp/Edventur?node-id=32-633&p=f&t=IVeJvxLZEEDrzpNC-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=32%3A633"
@@ -600,7 +601,6 @@ const EdventurCaseStudyPage = () => {
               View Figma Prototype
             </a>
           </div>
-          {/* Figma Prototype Button */}
         </SectionWrapper>
 
         <SectionWrapper>

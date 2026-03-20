@@ -2,11 +2,12 @@ import { Content } from "next/font/google";
 
 export const projects = [
   {
-    image: "/Discora.png",
-    name: "Discora",
+    image: "/rentwise.png",
+    name: "RentWise",
     type: "eccommerce",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae ipsam fugit accusantium, aliquid incidunt voluptates.",
+      "A rental platform designed to help Nigerians find trustworthy homes faster and help landlords list properties with less friction.",
+    href: "/projects/rentwise",
   },
   {
     image: "/Edventur.png",
@@ -17,11 +18,11 @@ export const projects = [
     href: "/projects/edventur",
   },
   {
-    image: "/dinendash.png",
-    name: "Dine n' Dash",
-    type: "Hospitality",
+    image: "/verbumdei.png",
+    name: "Verbum Dei Academy Admin Portal",
+    type: "Education",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae ipsam fugit accusantium, aliquid incidunt voluptates.",
+      "Verbum Dei Academy Admin Portal is a centralized school management platform designed to help administrators manage daily operations more efficiently. It brings key tasks, records, and school activities into one clear dashboard, reducing manual stress and improving visibility, organization, and decision-making.",
   },
   {
     image: "/paypoint.png",
