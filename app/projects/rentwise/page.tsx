@@ -55,7 +55,7 @@ const RentwiseCaseStudyPage = () => {
   const wireframes = sections["Wireframes to High-Fidelity"]?.text ?? [];
   const decisions = sections["Design Decisions"]?.text ?? [];
   const usability = sections["Usability Testing"]?.text ?? [];
-  const results = sections["Results"]?.text ?? [];
+//   const results = sections["Results"]?.text ?? [];
   const reflection = sections["Reflection"]?.text ?? [];
 
   // Design Decisions formatting

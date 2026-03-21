@@ -41,21 +41,21 @@ const IconPencil = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const IconFile = ({ className }: { className?: string }) => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.8"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className={className}
-    aria-hidden="true"
-  >
-    <path d="M6 3h7l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" />
-    <path d="M13 3v6h6" />
-  </svg>
-);
+// const IconFile = ({ className }: { className?: string }) => (
+//   <svg
+//     viewBox="0 0 24 24"
+//     fill="none"
+//     stroke="currentColor"
+//     strokeWidth="1.8"
+//     strokeLinecap="round"
+//     strokeLinejoin="round"
+//     className={className}
+//     aria-hidden="true"
+//   >
+//     <path d="M6 3h7l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" />
+//     <path d="M13 3v6h6" />
+//   </svg>
+// );
 
 const IconUser = ({ className }: { className?: string }) => (
   <svg
@@ -120,7 +120,7 @@ const Header = () => {
       </Link>
 
       <div ref={menuRef} className="relative">
-        <button
+        {/* <button
           type="button"
           className="bg-black hover:btn p-1 cursor-pointer items-center rounded-lg h-12 w-30 text-white flex"
           onMouseOver={() => setHovered(true)}
@@ -142,7 +142,37 @@ const Header = () => {
           >
             <span className={`${menuOpen && "rotate-45"} duration-300`}>+</span>
           </span>
-        </button>
+        </button> */}
+
+        <button
+  type="button"
+  className="bg-black hover:btn p-1 cursor-pointer items-center justify-center rounded-lg h-12 w-12 md:w-30 text-white flex"
+  onMouseOver={() => setHovered(true)}
+  onMouseOut={() => setHovered(false)}
+  onClick={() => setMenuOpen((open) => !open)}
+  aria-expanded={menuOpen}
+  aria-controls="header-menu"
+  aria-label="Open menu"
+>
+  <p className="relative h-6 flex-1 overflow-hidden hidden md:block">
+    <span
+      className={`flex text-md *:h-6 *:flex *:items-center *:justify-center absolute w-full flex-col ${
+        hovered && "-translate-y-1/2"
+      } top-0 duration-500 transition-transform`}
+    >
+      <span>Menu</span>
+      <span>Menu</span>
+    </span>
+  </p>
+
+  <span
+    className={`w-full md:w-10 flex items-center justify-center rounded-lg text-2xl duration-500 text-gray-400 ${
+      hovered && "text-4xl bg-gray-300/40"
+    } ${menuOpen && "text-4xl bg-gray-300/40"} h-full`}
+  >
+    <span className={`${menuOpen && "rotate-45"} duration-300`}>+</span>
+  </span>
+</button>
 
         <div
           id="header-menu"

@@ -1,60 +1,88 @@
 import { about } from "@/consants";
+import Link from "next/link";
 import React from "react";
+import CountUpOnView from "@/components/ui/CountUpOnView";
+
+const StatCard = ({
+  number,
+  label,
+  content,
+  wide = false,
+}: {
+  number: number;
+  label: string;
+  content: string;
+  wide?: boolean;
+}) => {
+  return (
+    <div className={`rounded-2xl bg-white p-5 sm:p-6 ${wide ? "xl:col-span-2" : ""}`}>
+      <div className="flex items-end justify-between border-b border-gray-200 pb-3">
+        <CountUpOnView
+          end={number}
+          suffix="+"
+          className="text-4xl sm:text-5xl font-semibold text-black"
+        />
+        <span className="text-sm sm:text-base text-gray-500">{label}</span>
+      </div>
+      <p className="pt-3 text-sm leading-6 text-gray-600">{content}</p>
+    </div>
+  );
+};
 
 const Intro = () => {
   return (
-    <div
+    <section
       id="about"
-      className="w-full scroll-mt-24 flex items-center p-10 justify-center bg-gray-200 py-20 max-lg:py-10"
+      className="w-full scroll-mt-24 bg-gray-100 px-4 py-8 sm:px-6 sm:py-10 lg:px-10 lg:py-16"
     >
-      <div className="xl:grid-cols-3 xl:grid-rows-2 lg:grid-rows-[2fr_1fr_1fr] lg:grid-cols-2 max-lg:grid-cols-1 max-lg:grid-rows-[3fr_1fr_1fr_1fr] *:rounded-xl grid gap-5 w-full max-w-350 ">
-        <div className="xl:col-[1/2] xl:row-[1/3] bg-black lg:col-[1/3] lg:row-[1/2] flex  flex-col gap-2 text-white/70 text-sm leading-6 p-6 ">
-          <h2 className="text-xl text-white font-semibold ">
+      <div className="mx-auto grid w-full max-w-7xl gap-4 sm:gap-5 lg:grid-cols-2 xl:grid-cols-3">
+        <div className="rounded-2xl bg-black p-5 sm:p-6 lg:col-span-2 xl:col-span-1 xl:row-span-2">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/45">
+            About me
+          </p>
+
+          <h2 className="mt-3 text-2xl sm:text-3xl font-semibold leading-tight text-white">
             {about.introHeading}
           </h2>
-          <div className="flex-1 flex flex-col gap-3">
-            {about.introSections.map((sec, i) => {
-              return (
-                <p key={i} className="">
-                  {sec}
-                </p>
-              );
-            })}
+
+          <div className="mt-4 space-y-3 text-sm sm:text-[15px] leading-7 text-white/75">
+            {about.introSections.map((sec, i) => (
+              <p key={i}>{sec}</p>
+            ))}
           </div>
-          <button className="bg-white  p-2 cursor-pointer items-center rounded-xl justify-center h-12 mt-5 w-full text-black flex">
-            <div className=" w-full group h-full overflow-hidden">
-              <div
-                className={`h-full group-hover:-translate-y-full text-md font-semibold *:flex *:items-center *:justify-center duration-300 flex flex-col *:h-full *:shrink-0`}
-              >
-                <span>View Details</span>
-                <span>View Details</span>
-              </div>
-            </div>
-          </button>
+
+          <p className="mt-4 text-sm sm:text-[15px] font-medium text-white">
+            Designing with empathy, clarity, and intention.
+          </p>
+
+          <Link
+            href="/about"
+            className="mt-6 flex h-11 w-full items-center justify-center rounded-xl bg-white px-5 text-sm font-semibold text-black transition hover:bg-white/90 sm:w-auto sm:min-w-[180px]"
+          >
+            View Details
+          </Link>
         </div>
-        <div className=" bg-white xl:col-[2/3] xl:row-[1/2] lg:col-[1/2] lg:row-[2/3] p-6">
-          <div className="flex justify-between items-end py-1 border-b-2 border-gray-400/30">
-            <p className="text-5xl font-semibold">{about.years.number}+</p>
-            <span className="p-1 text-xl text-gray-500">years</span>
-          </div>
-          <p className="py-2 text-sm">{about.years.content}</p>
-        </div>
-        <div className="bg-white xl:col-[3/4] xl:row-[1/2] lg:col-[2/3] lg:row-[2/3] p-6">
-          <div className="flex justify-between items-end py-1 border-b-2 border-gray-400/30">
-            <p className="text-5xl font-semibold">{about.projects.number}+</p>
-            <span className="p-1 text-xl text-gray-500">projects</span>
-          </div>
-          <p className="py-2 text-sm">{about.projects.content}</p>
-        </div>
-        <div className="bg-white xl:col-[2/4] xl:row-[2/3] lg:col-[1/3] lg:row-[3/4] p-6">
-          <div className="flex justify-between items-end py-1 border-b-2 border-gray-400/30">
-            <p className="text-5xl font-semibold">{about.brands.number}+</p>
-            <span className="p-1 text-xl text-gray-500">brands</span>
-          </div>
-          <p className="py-2 text-sm">{about.brands.content}</p>
-        </div>
+
+        <StatCard
+          number={Number(about.years.number)}
+          label="years"
+          content={about.years.content}
+        />
+
+        <StatCard
+          number={Number(about.projects.number)}
+          label="projects"
+          content={about.projects.content}
+        />
+
+        <StatCard
+          number={Number(about.brands.number)}
+          label="brands"
+          content={about.brands.content}
+          wide
+        />
       </div>
-    </div>
+    </section>
   );
 };
 

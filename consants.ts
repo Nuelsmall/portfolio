@@ -23,6 +23,7 @@ export const projects = [
     type: "Education",
     description:
       "Verbum Dei Academy Admin Portal is a centralized school management platform designed to help administrators manage daily operations more efficiently. It brings key tasks, records, and school activities into one clear dashboard, reducing manual stress and improving visibility, organization, and decision-making.",
+    href: "https://www.behance.net/portfolio/editor?project_id=215488159",
 
   },
   {

@@ -1,62 +1,121 @@
+"use client";
+
 import { reviews } from "@/consants";
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
-
-
+import React from "react";
+import { motion, useReducedMotion, type Variants } from "framer-motion";
 
 const Reviews = () => {
-  const [lefts, setLefts] = useState(0);
-  const [right, setRight] = useState(0);
-  const wrapperRef = useRef<HTMLDivElement>(null);
+  const shouldReduceMotion = useReducedMotion();
 
-  useEffect(() => {
-    if (!wrapperRef.current) return;
-    if (wrapperRef.current.offsetWidth < 927) return;
-    console.log(wrapperRef.current.offsetWidth);
-    function handleScroll() {
-      const scroll = window.scrollY;
-      console.log(scroll);
-      const leftScroll = Math.min(1 + scroll * 0.1, 50);
-      const rightScroll = Math.min(1 + scroll * 0.1, 50);
+  const containerVariants: Variants = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: shouldReduceMotion ? 0 : 0.14,
+      },
+    },
+  };
 
-      setRight(rightScroll);
-      setLefts(leftScroll);
-
-      console.log(leftScroll, rightScroll);
-    }
-
-    window.addEventListener("scroll", handleScroll);
-  }, []);
+  const cardVariants: Variants = {
+    hidden: {
+      opacity: 0,
+      y: shouldReduceMotion ? 0 : 28,
+    },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.55,
+        ease: "easeOut" as const,
+      },
+    },
+  };
 
   return (
-    <div
+    <section
       id="reviews"
-      className="w-full scroll-mt-24 flex items-center p-10 justify-center bg-gray-200 py-20 max-lg:py-10"
+      className="w-full scroll-mt-24 bg-gray-100 px-4 py-10 sm:px-6 lg:px-10 lg:py-20"
     >
-      <div
-        ref={wrapperRef}
-        className="max-w-350 w-full items-stretch gap-5 grid grid-cols-1 lg:grid-cols-3"
-      >
-        {reviews.map((review, i) => {
-          return (
-            <div
+      <div className="mx-auto w-full max-w-7xl">
+        <motion.div
+          initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.35 }}
+          transition={{ duration: 0.5 }}
+          className="mb-8 max-w-2xl"
+        >
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gray-500">
+            Reviews
+          </p>
+          <h2 className="mt-2 text-2xl font-semibold text-black sm:text-3xl">
+            What people say
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-gray-600 sm:text-base">
+            A few kind words from people I’ve worked with across product and
+            design projects.
+          </p>
+        </motion.div>
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          className="grid w-full gap-5 md:grid-cols-2 xl:grid-cols-3"
+        >
+          {reviews.map((review, i) => (
+            <motion.div
               key={i}
-              className="p-5 bg-white rounded-xl flex flex-col gap-5 flex-1"
+              variants={cardVariants}
+              whileHover={
+                shouldReduceMotion
+                  ? {}
+                  : {
+                      y: -6,
+                      transition: { duration: 0.2 },
+                    }
+              }
+              className="group rounded-2xl border border-black/5 bg-white p-5 shadow-sm transition-shadow duration-300 hover:shadow-md sm:p-6"
             >
-              <Image
-                src={review.image ?? "/default.jpg"}
-                className="w-12 self-end rounded-full"
-                alt={review.name}
-                width={100}
-                height={100}
-              />
-              <p>&quot;{review.quote} &quot;</p>
-              <p className="flex flex-col text-md">{review.name} <span className="text-sm">{review.company}</span></p>
-            </div>
-          );
-        })}
+              <div className="flex items-start justify-between gap-4">
+                <motion.div
+                  initial={{ scale: 0.9, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.35,
+                    delay: shouldReduceMotion ? 0 : i * 0.08,
+                  }}
+                  className="order-2"
+                >
+                  <Image
+                    src={review.image ?? "/default.jpg"}
+                    className="h-12 w-12 rounded-full object-cover ring-2 ring-gray-100"
+                    alt={review.name}
+                    width={100}
+                    height={100}
+                  />
+                </motion.div>
+
+                <div className="order-1 flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-xl text-gray-400">
+                  ”
+                </div>
+              </div>
+
+              <p className="mt-5 text-sm leading-7 text-gray-700 sm:text-[15px]">
+                {review.quote}
+              </p>
+
+              <div className="mt-6 border-t border-gray-100 pt-4">
+                <p className="text-sm font-semibold text-black">{review.name}</p>
+                <p className="text-sm text-gray-500">{review.company}</p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 
