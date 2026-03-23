@@ -32,8 +32,8 @@ const Hero = () => {
         className="max-w-[12ch] sm:max-w-[14ch] md:max-w-[16ch] text-center font-semibold tracking-tight text-[clamp(2.6rem,11vw,4.5rem)] leading-[0.95]"
       >
         <span className="text-gray-500">Good design </span>
-        solves problems. <span className="text-gray-500">Great design </span>
-        travels.
+        solves problems. <span className="text-gray-500"><br></br> Great design </span>
+        changes behavior.
       </h1>
 
       <p className="max-w-xs sm:max-w-xl text-center text-base sm:text-lg md:text-xl leading-7 text-gray-500">
