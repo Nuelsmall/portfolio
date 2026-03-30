@@ -4,7 +4,7 @@ export const projects = [
   {
     image: "/rentwise.png",
     name: "RentWise",
-    type: "eccommerce",
+    type: "eCommerce, SaaS",
     description:
       "A rental platform designed to help Nigerians find trustworthy homes faster and help landlords list properties with less friction.",
     href: "/projects/rentwise",

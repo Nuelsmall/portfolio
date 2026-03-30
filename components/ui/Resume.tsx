@@ -30,7 +30,7 @@ const Resume = ({ hero }: { hero?: boolean }) => {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <Link href={"https://drive.google.com/file/d/196oztic7YBzBRlO-JSzkSC-Xr5TMQTeQ/view?usp=sharing"}>
+    <Link href={"https://drive.google.com/file/d/1rQI9q67QdWP5x5NuDGjhCUqZCnOtFN6N/view?usp=sharing"} target="_blank">
       <button
         className={`${hero ? `bg-black` : "bg-white"} p-2 cursor-pointer items-center rounded-xl justify-center h-12 w-40 text-white flex`}
         onMouseOver={() => setHovered(true)}

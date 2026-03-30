@@ -15,7 +15,7 @@ const Project = ({
   let snapshotItems: { label: string; value: string }[] = [];
   if (p.name === "Edventur") {
     snapshotItems = [
-      { label: "Role", value: "Product Designer" },
+      { label: "Role", value: "UI/UX Designer" },
       { label: "Scope", value: "Study Mode experience" },
       { label: "Platform", value: "Mobile app" },
       { label: "Focus", value: "Upload to quiz completion journey" },
@@ -23,7 +23,7 @@ const Project = ({
     ];
   } else if (p.name === "RentWise") {
     snapshotItems = [
-      { label: "Role", value: "Product Designer" },
+      { label: "Role", value: "UI/UX Designer" },
       { label: "Scope", value: "Rental platform design" },
       { label: "Platform", value: "Mobile app" },
       { label: "Focus", value: "User Journey, Affinity Mapping, User flow, Information Architecture" },
