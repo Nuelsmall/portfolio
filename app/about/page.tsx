@@ -51,14 +51,13 @@ const skillset = [
 ];
 
 const education = [
-  "B.Sc. Computer Science – University of the People (2024–2027) (In View)",
-  "MSc. Environmental Pollution and Toxicology – University of Calabar (2023)",
+  "B.Sc. Computer Science – University of the People (2024–2027)",
   "PGD in Project Management – CIPM, Ghana (2020)",
   "B.Sc. Zoology & Environmental Biology – University of Calabar (2018)",
 ];
 
 const certifications = [
-  "Certified UX Designer - IXDF (2025) (In view)",
+  "Human Computer Interaction - Udemy (2025)",
   "Google UX Design Certificate - Google (2025)",
   "UI/UX Master Class – EmboldLab, UK. (2024)",
   "Front-End Web Development – SimpliLearn (2024)",
